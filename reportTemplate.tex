@@ -24,10 +24,8 @@
 \usepackage{natbib} % Required to change bibliography style to APA
 \usepackage{amsmath} % Required for some math elements 
 
-\setlength\parindent{0pt} % Removes all indentation from paragraphs
-
-\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
-
+%\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+\CTEXsetup[format={\Large\bfseries}]{section}
 %----------------------------------------------------------------------------------------
 % SETTING OF CODE BLOCK
 %----------------------------------------------------------------------------------------
@@ -82,26 +80,31 @@
 
 \begin{center}
 \begin{tabular}{l r}
-实验日期: & January 1, 2012 \\ % Date the experiment was performed
-作者: & 刘朝洋 \\ % Partner names
+专业班级: & 计算机141 \\ % Date the experiment was performed
+学生姓名: & 刘朝洋 \\ % Partner names
 指导老师: & 耿楠 % Instructor/supervisor
 \end{tabular}
 \end{center}
 
 % If you wish to include an abstract, uncomment the lines below
-% \begin{abstract}
-% Abstract text
-% \end{abstract}
+\begin{abstract}
+这是一个\LaTeX 报告模版。
+\end{abstract}
 
+\pagestyle{plain}
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
 \section{实验目的}
 
+\subsection{内容}
+
 这里主要是用于阐述本次实验的目的。
 
-可以通过下列命令使用列表项：
+\subsection{使用列表项}
+
+在实验报告中，我们经常会用到列表项。我们可以通过下列命令使用列表项：
 
 \begin{enumerate}
 
@@ -117,7 +120,11 @@
 
 \section{实验内容}
 
+\subsection{内容}
+
 这里主要用于阐述本次实验的基本内容。
+
+\subsection{待定}
 
 %----------------------------------------------------------------------------------------
 %	SECTION 3
@@ -156,12 +163,33 @@ AB^2 = BC^2 + AC^2
 
 \section{结果与结论}
 
-实验结果
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.65\textwidth]{placeholder} % Include the image placeholder.png
+\subsection{内容}
+
+这里主要是陈述实验结果，并根据实验结果得出实验结论。不管实验结果怎样，必须如实地描述。为了更好地呈现实验结果，可以采用图表的形式。
+
+\subsection{插入图表}
+
+我们可以使用下面的方式插入图片：
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth,height=0.25\textwidth]{placeholder} % Include the image placeholder.png
 \caption{Figure caption.}
-\end{center}
+\label{fig:image}
+\end{figure}
+
+当然，插入表格的方法也很类似，如下表所示：
+
+\begin{figure}[H]
+\centering
+\begin{tabular}{|l|c|r|}
+\hline
+left & center & right	\\
+\hline
+本列左对齐 & 本列居中 & 本列右对齐	\\
+\hline
+\end{tabular}
+\caption{表格示例}
 \end{figure}
 
 %----------------------------------------------------------------------------------------
